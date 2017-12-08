@@ -10,7 +10,9 @@ RabbitConnection.then(function(conn) {
   return conn.createChannel();
 }).then(function(ch) {
   return ch.assertExchange(Exchange.name, Exchange.mode, Exchange.opts).then(() => {
-    ch.publish(Exchange.name, conf.key, new Buffer('Message...'));
+    ch.publish(Exchange.name, conf.key, new Buffer('Message ' + Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1)));
     console.log('message sent');
     return;
   });
