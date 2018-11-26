@@ -1,2 +1,4 @@
 node_modules
 configs.js
+docker/rabbitmq/enabled_plugins
+docker/rabbitmq/rabbitmq-isolated.conf
