@@ -35,10 +35,7 @@ const RabbitConnection = Amqplib.connect(conf.server);
         Math.floor((1 + Math.random()) * 0x10000)
         .toString(16)
         .substring(1)
-      ),
-      function(err) {
-        console.log('err', err);
-      }
+      )
     );
     console.log("\n\nmessage sent");
   }
