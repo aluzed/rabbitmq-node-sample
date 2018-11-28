@@ -1,8 +1,8 @@
 module.exports = {
   server: {
     host: 'localhost',
-    username: 'root',
-    password: 'root',
+    username: 'admin',
+    password: 'admin',
     port: '5672',
     vhost: '/'
   },
